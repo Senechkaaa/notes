@@ -34,10 +34,17 @@ const Edit = () => {
     const { username } = userInfo
     const token = localStorage.getItem('token')
     const navigate = useNavigate()
+    const docRef = doc(db, 'users', token!)
 
     const updateData = async (data: UserInfoSchemaType) => {
         try {
-            await updateDoc(doc(db, 'users', token), data)
+            await updateDoc(docRef, {
+                username: data.username,
+                lastname: data.lastname,
+                description: data.description,
+                age: data.age,
+                phone: data.phone,
+            })
             navigate('/notes/profile')
         } catch (error) {
             console.error(error)

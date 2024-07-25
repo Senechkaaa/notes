@@ -10,7 +10,7 @@ interface IGetBoardsProps {
 
 export const useGetBoards = ({
     boards,
-}: IGetBoardsProps): [IUserData, boolean] => {
+}: IGetBoardsProps): [IUserData | null, boolean] => {
     const [userBoards, setUserBoards] = useState<IUserData | null>(null)
     const [loading, setLoading] = useState<boolean>(true)
 
