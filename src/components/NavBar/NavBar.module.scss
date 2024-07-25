@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+
+    .item {
+        list-style-type: none;
+
+        .link {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #091e42;
+            padding-right: 30px;
+        }
+    }
+}

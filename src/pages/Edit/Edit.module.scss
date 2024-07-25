@@ -1,0 +1,78 @@
+.wrapper {
+    height: 100%;
+    width: 100%;
+
+    .form {
+        display: flex;
+        height: 100%;
+        width: 100%;
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .input {
+                margin-top: 20px;
+                width: 75%;
+                height: 10%;
+                border-radius: 10px;
+                font-size: 18px;
+                background-color: #deebff;
+                font-family: 'Titillium Web', sans-serif;
+                outline: none;
+                border: none;
+            }
+
+            .textarea {
+                resize: none;
+                width: 75%;
+                background-color: #deebff;
+                font-size: 18px;
+                border: none;
+                border-radius: 10px;
+                height: 33%;
+                font-family: 'Titillium Web', sans-serif;
+                margin-top: 20px;
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                width: 10%;
+                font-size: 1rem;
+                margin-top: 20px;
+                transition: all 250ms ease-out 0s;
+                background-color: rgb(0, 101, 255);
+                border: rgb(0, 101, 255);
+                padding: 10px 40px;
+                color: #fff;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: rgb(7, 71, 166);
+                    border-color: rgb(7, 71, 166);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .container__logo {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            height: 60px;
+        }
+
+        .text {
+            font-size: 30px;
+            margin-left: 10px;
+        }
+    }
+}
+
+span {
+    color: #3e62ee;
+}

@@ -1,0 +1,23 @@
+.modal {
+    padding-top: 10px;
+    display: none;
+    position: absolute;
+    top: 150px;
+    left: 420px;
+    background-color: #ffffff;
+    border: 3px solid #a2b0e7;
+    border-radius: 20px;
+    width: 300px;
+    min-height: 200px;
+
+    .modal_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+}

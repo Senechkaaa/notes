@@ -1,0 +1,128 @@
+body {
+    overflow-x: hidden;
+}
+.main {
+    background-color: #deebff;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    .container_profile {
+        background-color: #a2b0e7;
+        padding: 10px 0 10px 0;
+        border-bottom: 2px solid #8596e8;
+        margin-bottom: 30px;
+
+        .profile {
+            padding-left: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 30px;
+        }
+    }
+
+    .container_add {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        padding-left: 50px;
+
+        .input {
+            border-radius: 10px;
+            font-size: 18px;
+            font-family: 'Titillium Web', sans-serif;
+            border: none;
+            height: 40px;
+            width: 250px;
+            margin-right: 10px;
+        }
+
+        .input_task {
+            margin-top: 20px;
+        }
+
+        .btn {
+            font-size: 1rem;
+            transition: all 250ms ease-out 0s;
+            background-color: rgb(0, 101, 255);
+            border: rgb(0, 101, 255);
+            color: #fff;
+            border-radius: 10px;
+            padding: 10px;
+
+            &:hover {
+                background-color: rgb(7, 71, 166);
+                border-color: rgb(7, 71, 166);
+                cursor: pointer;
+            }
+        }
+
+        .list_btn {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .container_board {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 50px 0 50px;
+        gap: 90px;
+        justify-content: center;
+
+        .board {
+            border: 3px solid #8596e8;
+            border-radius: 50px;
+            min-width: 400px;
+            min-height: 500px;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .board_title {
+                font-size: 1.5rem;
+                font-family: 'Titillium Web', sans-serif;
+            }
+
+            .item {
+                font-size: 1.5rem;
+                width: 70%;
+                color: white;
+                border-radius: 5px;
+                cursor: grab;
+                background-color: #a2b0e7;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+//.container_board {
+//
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//
+//  .board {
+//    border: 1px solid black;
+//    min-width: 400px;
+//    min-height: 500px;
+//    padding: 20px 10px;
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//  }
+//
+//  .board_title {
+//    font-size: 1.5rem;
+//    font-family: 'Titillium Web', sans-serif;
+//  }
+//
+
+//}

@@ -1,0 +1,74 @@
+.main {
+    //margin-top:4rem;
+    .text_block {
+        background-color: #deebff;
+        padding: 4rem 0 0;
+        display: flex;
+        align-items: center;
+        //padding: 0.1rem 0;
+        justify-content: center;
+
+        .text {
+            color: #091e42;
+            display: block;
+        }
+    }
+
+    .notes_registration {
+        background: rgb(82, 67, 170);
+        color: white;
+        justify-content: center;
+        display: flex;
+
+        .wrapper {
+            align-items: center;
+            display: flex;
+            text-align: left;
+            max-width: 1140px;
+
+            .container_text {
+                .title {
+                    font-size: 3rem;
+                    line-height: 1.25;
+                }
+
+                .desc {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .input_email {
+                font-size: 1rem;
+                padding: 0.7rem 0.75rem 0.8rem;
+                border: 1px solid rgb(223, 225, 230);
+                border-radius: 0.3rem;
+                max-width: 300px;
+                transition: all 250ms ease-out 0s;
+            }
+
+            .form_btn {
+                transition: all 250ms ease-out 0s;
+                background-color: rgb(0, 101, 255);
+                border: rgb(0, 101, 255);
+                padding: 0.7rem 1rem 0.8rem;
+                color: rgb(255, 255, 255);
+                margin-left: 20px;
+                font-size: 1rem;
+                text-align: center;
+
+                &:hover {
+                    background-color: rgb(7, 71, 166);
+                    border-color: rgb(7, 71, 166);
+                    cursor: pointer;
+                }
+            }
+
+            .container_img {
+                .img {
+                    width: 630px;
+                    //width: ;
+                }
+            }
+        }
+    }
+}

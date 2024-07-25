@@ -1,0 +1,62 @@
+.wrapper {
+    //max-width: 100%;
+    position: fixed;
+    background-color: #fff;
+    height: 65px;
+    width: 100%;
+    transition:
+        background-color 0.5s ease 0s,
+        box-shadow 0.5s ease 0s;
+
+    &:hover {
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(9, 30, 66, 0.15) 0px 0.5rem 1rem 0px;
+    }
+
+    .header {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        max-width: 1320px;
+        margin: 0 auto;
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .btn {
+            align-items: center;
+            color: #091e42;
+            display: flex;
+            font-size: 1.2rem;
+            height: 100%;
+            padding: 0 1.5rem;
+            text-decoration: none;
+        }
+
+        .container_btn {
+            display: flex;
+            height: 65px;
+            align-items: center;
+
+            .login_link {
+            }
+
+            .register_link {
+                background-color: rgb(0, 101, 255);
+                color: white;
+                font-weight: 600;
+                height: 100%;
+            }
+        }
+    }
+}
