@@ -51,8 +51,8 @@ const Notes: FC = () => {
         target.style.boxShadow = 'none'
     }
 
-    function dropCardHandler(e: React.DragEvent, board: IBoards) {
-        const newBoards = getData.boards!.map((b) => {
+    function dropCardHandler(board: IBoards) {
+        const newBoards = getData?.boards!.map((b) => {
             if (b.id === board.id) {
                 return { ...b, items: [...b.items, currentItem] }
             }
@@ -65,8 +65,18 @@ const Notes: FC = () => {
             return b
         })
 
-        setBoards(newBoards)
-        updateData(newBoards)
+        if (newBoards) {
+            setBoards(newBoards.filter((board) => board !== null) as IBoards[])
+            const sanitizedBoards = newBoards.map((board) => ({
+                ...board,
+                items: board.items.filter(
+                    (item): item is IBoardsItems => item !== null,
+                ),
+            }))
+
+            setBoards(sanitizedBoards)
+        }
+
         console.log('new Data')
     }
 
@@ -143,7 +153,7 @@ const Notes: FC = () => {
             updateData(boards)
         }
     }, [boards])
-    console.log(getData?.boards)
+
     return (
         <main className={style.main}>
             <div className={style.container_profile}>
@@ -202,8 +212,8 @@ const Notes: FC = () => {
                     getData?.boards!.map((board) => (
                         <div
                             onDragOver={dragOverHandler}
-                            onDrop={(e: React.DragEvent) =>
-                                dropCardHandler(e, board)
+                            onDrop={() =>
+                                dropCardHandler(board)
                             }
                             key={board.id}
                             className={style.board}
